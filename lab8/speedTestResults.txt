@@ -1,0 +1,29 @@
+RandomSpeedTest
+
+What would you like L to be?: 1000
+
+Enter # strings to insert into ULLMap: 1000
+class ULLMap: 0.08 sec
+
+Enter # strings to insert into your MyHashMap: 1000
+class MyHashMap: 0.03 sec
+
+Enter # strings to insert into Java's HashMap: 10000
+Java's Built-in HashMap: 0.19 sec
+
+---------------------------------------------------------
+
+InOrderSpeedTest
+
+Enter # strings to insert into ULLMap: 10000
+class ULLMap: 1.51 sec
+
+Enter # strings to insert into MyHashMap: 10000
+class MyHashMap: 0.07 sec
+
+Enter # strings to insert into Java's HashMap: 100000
+Java's Built-in HashMap: 0.18 sec
+
+----------------------------------------------------------
+
+I think when we need to use the property of a TreeMap--values inserted in order-- we will favour TreeMap over HashMap
