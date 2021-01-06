@@ -1,0 +1,24 @@
+Classes
+---------------------------------------------
+Engine: the class for the two methods and helper methods
+HallWay: contains method to create vertical and horizontal hallways
+Room: create rooms, keep the coordinates of the center of each room
+Trash: just a place to recycle historical codes in case I am gonna go back to former versions
+
+Algorithm
+---------------------------------------------
+for interaction-with-keyboard method, I firstly pull up the menu, then waiting for the user to type in their first
+key, which should be either "n" or "l", I will use two different conditional statement to determine whether to read
+the load or create a new world, if it's reading, then there's a read() method in Engine class which will scan
+through the "Saved Position.txt" and "Saved World.txt" and translate those Strings ("n"=Nothing,"w"=Wall,"f"=Floor),
+into Tiles and repave the world. If the user hits "n", then the programme will step into the "solicitNCharsInput",
+which takes in a set of coordinates to display the user input. In this method, there's an infinite loop which will
+stop when the user hits specific key. After the world is generated the 2d array will be initialized and redered by
+"ter.initialize" and "ter.renderFrame". In the end, the programme will step into another "solicitNCharsInput" which
+has a different signature. This one takes in the 2d array and takes care of moving and saving and quitting.
+
+Persistence
+---------------------------------------------
+Just like loading described above, saving translate each type of Tile into strings("n"=Nothing,"w"=Wall,"f"=Floor).
+and then save them in the "Saved Position.txt". It also saves the player's current position into the "Saved World".
+Later, the read() method will parse through these two files and then reproduce the whole world.
